@@ -1,0 +1,6 @@
+.vscode
+.playground.cpp
+.template*
+!.template.cpp
+*.exe
+b.cpp
