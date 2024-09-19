@@ -4,3 +4,4 @@
 !.template.cpp
 *.exe
 b.cpp
+.wa*.cpp
