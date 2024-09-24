@@ -1,32 +1,27 @@
+/*
+* Helpful Maths
+* https://codeforces.com/contest/339/problem/A
+* Tue Sep 24 2024, 17:07:02 (UTC-3)
+* Myckoll Winchester
+*/
 #include <bits/stdc++.h>
 using namespace std;
-
-#define debug_vec(vec) cout << #vec << ": { "; for (auto v : vec) cout << v << " "; cout << "}  size: " << vec.size() << "\n";
-inline void next_line() { string ignore; getline(cin, ignore); }
-
-template <typename T>
-void read(T& t) { cin >> t; }
-template <typename T, typename... Args>
-void read(T& t, Args&... args) { cin >> t; read(args...); }
-
+ 
 void solve() {
-    string s; read(s);
-    int _1 = count(s.begin(), s.end(), '1');
-    int _2 = count(s.begin(), s.end(), '2');
-    int _3 = count(s.begin(), s.end(), '3');
-    string s2 = "";
-    for (int i = 0; i < _1; ++i) s2 += "1+";
-    for (int i = 0; i < _2; ++i) s2 += "2+";
-    for (int i = 0; i < _3; ++i) s2 += "3+";
-    s2[s2.size()-1] = '\n';
-    cout << s2;
+    string s;
+    cin >> s;
+    vector<int> v;
+    for (char c : s)
+        if (c != '+')
+            v.push_back(c - '0');
+    sort(v.begin(), v.end());
+    for (int i = 0; i < v.size(); ++i)
+        cout << v[i] << "+\n"[i==v.size()-1];
 }
-
+ 
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    // int t; read(t);
-    // while (--t)
-        solve();
+    solve();
     return 0;
 }
