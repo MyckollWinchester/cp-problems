@@ -12,7 +12,6 @@ void solve() {
     cin >> n;
     string s;
     cin >> s;
-    bool cond = true;
     for (i = 0; i < n; ++i) {
         while (s[i] == 'W' && i < n)
             ++i;
