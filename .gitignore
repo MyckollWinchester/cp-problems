@@ -2,6 +2,7 @@
 .playground.cpp
 .template*
 !.template.cpp
+!.template-contest.cpp
 *.exe
 b.cpp
 .wa*.cpp
