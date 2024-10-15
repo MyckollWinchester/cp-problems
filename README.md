@@ -1,6 +1,6 @@
-# My Codeforces Solutions
+# My Competitive Programming Solutions
 
-This repository contains my solutions to the problems on [Codeforces](https://codeforces.com/). Some may be old, unoptimal or plainly unreadable. I will try to fix them as I learn more.
+This repository contains my solutions to the problems on [Codeforces](https://codeforces.com/), [AtCoder](https://atcoder.jp/) & [LeetCode](https://leetcode.com/). Some may be old, unoptimal or plainly unreadable. I will try to fix them as I learn more.
 
 ## File Header
 
@@ -13,4 +13,4 @@ This repository contains my solutions to the problems on [Codeforces](https://co
 */
 ```
 
-> _Old submissions may not have this header. I will try to add them as I update the files._
+> _Old submissions may not have this header._
