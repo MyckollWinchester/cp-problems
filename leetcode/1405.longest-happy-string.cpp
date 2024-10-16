@@ -1,8 +1,10 @@
 /*
- * @lc app=leetcode id=1405 lang=cpp
- *
- * [1405] Longest Happy String
- */
+* @lc app=leetcode id=1405 lang=cpp
+* [1405] Longest Happy String
+* https://leetcode.com/problems/longest-happy-string/
+* Tue Oct 15 2024, 22:02:31 (UTC-3)
+* Myckoll Winchester
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
