@@ -8,7 +8,6 @@
 using namespace std;
 
 typedef long long ll;
-#define all(x) (x).begin(), (x).end()
 
 void solve() {
     int n, d, m, s;
@@ -19,7 +18,7 @@ void solve() {
         cin >> m >> s;
         v.emplace_back(m, s);
     }
-    sort(all(v));
+    sort(v.begin(), v.end());
     ll cum, _max;
     cum = _max = 0;
     for (auto &[a, b] : v) {
@@ -28,8 +27,7 @@ void solve() {
     }
     for (int i = 1; i <= n; ++i) {
         auto it = upper_bound(v.begin() + i, v.end(), make_pair(v[i].first + d, 0ll));
-        int j = it - v.begin();
-        j--;
+        int j = it - v.begin() - 1;
         _max = max(_max, v[j].second - v[i-1].second);
     }
     cout << _max << '\n';
