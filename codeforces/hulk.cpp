@@ -1,7 +1,7 @@
 /*
 * Hulk
 * https://codeforces.com/problemset/problem/705/A
-* Tue Sep 24 2024, 22:40:21 (UTC-3)
+* Mon May 19 2025, 17:57:15 (UTC-4)
 * Myckoll Winchester
 */
 #include <bits/stdc++.h>
@@ -11,16 +11,10 @@ void solve() {
     int n;
     cin >> n;
     for (int i = 0; i < n; ++i) {
-        if (i%2)
-            cout << "I love ";
-        else
-            cout << "I hate ";
-        if (i < n-1)
-            cout << "that ";
-        else
-            cout << "it";
+        cout << "I ";
+        cout << (i % 2 ? "love " : "hate ");
+        cout << (i < n - 1 ? "that " : "it\n");
     }
-    cout << '\n';
 }
 
 int main() {
