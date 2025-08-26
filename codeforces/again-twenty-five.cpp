@@ -1,6 +1,6 @@
 /*
 * Again Twenty Five!
-* --ProblemURL (change after contest)
+* https://codeforces.com/problemset/problem/630/A
 * Tue Aug 26 2025, 00:31:17 (UTC-4)
 * Myckoll Winchester
 */
