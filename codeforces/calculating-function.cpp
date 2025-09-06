@@ -1,17 +1,18 @@
+/*
+* Calculating Function
+* https://codeforces.com/problemset/problem/486/A
+* Tue Sep 02 2025, 13:48:32 (UTC-4)
+* Myckoll Winchester
+*/
 #include <bits/stdc++.h>
-
 using namespace std;
 
-void solve() {
-    long long n;
-    cin >> n;
-    bool flag = false;
-    if (n%2) {
-        flag = true;
-        n += 1;
-    }
-    cout << n/2 * (1 - 2*flag) << "\n";
+typedef long long ll;
 
+void solve() {
+    ll n;
+    cin >> n;
+    cout << (n % 2 ? "-" : "") << n / 2 + n % 2 << '\n';
 }
 
 int main() {
