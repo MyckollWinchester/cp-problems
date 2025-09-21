@@ -1,7 +1,7 @@
 /*
 * @lc app=leetcode id=2938 lang=cpp
 * [2938] Separate Black and White Balls
-* https://leetcode.com/problems/separate-black-and-white-balls/
+* https://leetcode.com/problems/separate-black-and-white-balls
 * Tue Oct 15 2024, 02:00:19 (UTC-3)
 * Myckoll Winchester
 */
@@ -12,8 +12,6 @@ using namespace std;
 class Solution {
 public:
     long long minimumSteps(string s) {
-        ios::sync_with_stdio(false);
-        cin.tie(nullptr);
         long long steps = 0;
         int j, i = 0;
         while (s[i] == '0')
@@ -30,4 +28,3 @@ public:
     }
 };
 // @lc code=end
-

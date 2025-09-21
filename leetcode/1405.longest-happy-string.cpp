@@ -1,7 +1,7 @@
 /*
 * @lc app=leetcode id=1405 lang=cpp
 * [1405] Longest Happy String
-* https://leetcode.com/problems/longest-happy-string/
+* https://leetcode.com/problems/longest-happy-string
 * Tue Oct 15 2024, 22:02:31 (UTC-3)
 * Myckoll Winchester
 */
@@ -12,8 +12,6 @@ using namespace std;
 class Solution {
 public:
     string longestDiverseString(int a, int b, int c) {
-        ios::sync_with_stdio(false);
-        cin.tie(nullptr);
         priority_queue<pair<int, char>> pq;
         pq.push({a, 'a'});
         pq.push({b, 'b'});
@@ -47,4 +45,3 @@ public:
     }
 };
 // @lc code=end
-

@@ -5,7 +5,6 @@
 * Fri Oct 18 2024, 20:35:24 (UTC-3)
 * Myckoll Winchester
 */
-
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -28,4 +27,3 @@ public:
     }
 };
 // @lc code=end
-

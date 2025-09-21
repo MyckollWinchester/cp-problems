@@ -1,7 +1,7 @@
 /*
 * @lc app=leetcode id=1106 lang=cpp
 * [1106] Parsing A Boolean Expression
-* --ProblemURL (change after contest)
+* https://leetcode.com/problems/parsing-a-boolean-expression
 * Sat Oct 19 2024, 22:35:44 (UTC-3)
 * Myckoll Winchester
 */
@@ -16,7 +16,6 @@ public:
             if (s[i] == c) return true;
         return false;
     }
-
     bool parseBoolExpr(string s) {
         while (s.contains("(")) {
             int lb = s.find_last_of('(');
@@ -39,4 +38,3 @@ public:
     }
 };
 // @lc code=end
-

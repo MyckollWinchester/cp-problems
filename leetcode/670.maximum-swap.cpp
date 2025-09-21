@@ -12,8 +12,6 @@ using namespace std;
 class Solution {
 public:
     int maximumSwap(int num) {
-        ios::sync_with_stdio(false);
-        cin.tie(nullptr);
         string s1 = to_string(num);
         string s2 = s1;
         sort(s2.begin(), s2.end(), greater<int>());

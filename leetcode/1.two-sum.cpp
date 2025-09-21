@@ -12,8 +12,6 @@ using namespace std;
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
-        ios::sync_with_stdio(false);
-        cin.tie(nullptr);
         int n = nums.size();
         vector<pair<int,int>> v(n);
         for (int i = 0; i < n; ++i)
