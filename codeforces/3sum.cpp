@@ -1,48 +1,48 @@
-/* DON'T TAKE THIS SOLUTION SERIOUSLY PLEASE :sob: */
-
 /*
 * 3SUM
 * https://codeforces.com/contest/1692/problem/F
-* Sun Oct 06 2024, 16:39:50 (UTC-3)
+* Thu Sep 25 2025, 02:05:34 (UTC-3)
 * Myckoll Winchester
 */
 #include <bits/stdc++.h>
 using namespace std;
 
 void solve() {
-    int n, a;
+    int n;
     cin >> n;
-    map<int, int> m = {{0, 0}, {1, 0}, {2, 0}, {3, 0}, {4, 0}, {5, 0}, {6, 0}, {7, 0}, {8, 0}, {9, 0}};
+    
+    // how many times a digit is the last digit of a number
+    vector<int> nums(10);
     while (n--) {
-        cin >> a;
-        m[a%10]++;
+        int i;
+        cin >> i;
+        nums[i%10]++;
     }
-    if (   (m[0] >= 2 && m[3] >= 1)
-        || (m[0] >= 1 && m[1] >= 1 && m[2] >= 1)
-        || (m[1] >= 3)
-        || (m[0] >= 1 && m[4] >= 1 && m[9] >= 1)
-        || (m[1] >= 1 && m[3] >= 1 && m[9] >= 1)
-        || (m[2] >= 2 && m[9] >= 1)
-        || (m[0] >= 1 && m[5] >= 1 && m[8] >= 1)
-        || (m[1] >= 1 && m[4] >= 1 && m[8] >= 1)
-        || (m[2] >= 1 && m[3] >= 1 && m[8] >= 1)
-        || (m[0] >= 1 && m[6] >= 1 && m[7] >= 1)
-        || (m[1] >= 1 && m[5] >= 1 && m[7] >= 1)
-        || (m[2] >= 1 && m[4] >= 1 && m[7] >= 1)
-        || (m[3] >= 2 && m[7] >= 1)
-        || (m[1] >= 1 && m[6] >= 2)
-        || (m[2] >= 1 && m[5] >= 1 && m[6] >= 1)
-        || (m[3] >= 1 && m[4] >= 1 && m[6] >= 1)
-        || (m[3] >= 1 && m[5] >= 2)
-        || (m[4] >= 2 && m[5] >= 1)
-        || (m[9] >= 2 && m[5] >= 1)
-        || (m[9] >= 1 && m[8] >= 1 && m[6] >= 1)
-        || (m[9] >= 1 && m[7] >= 2)
-        || (m[8] >= 2 && m[7] >= 1)
-    )
-        cout << "YES\n";
-    else
-        cout << "NO\n";
+    
+    // we will use a digit at most 3 times
+    for (int &num : nums) num = min(3, num);
+
+    // spread the digits in a vector
+    vector<int> a;
+    for (int i = 0; i < 10; ++i)
+        while (nums[i]--)
+            a.push_back(i);
+            
+    // bruteforce, as there is at most 30 digits in the vector
+    // O(n + 30^3)
+    n = a.size();
+    for (int i = 0; i < n-2; ++i) {
+        for (int j = i+1; j < n-1; ++j) {
+            for (int k = j+1; k < n; ++k) {
+                if ((a[i] + a[j] + a[k]) % 10 == 3) {
+                    cout << "YES\n";
+                    return;
+                }
+            }
+        }
+    }
+
+    cout << "NO\n";
 }
 
 int main() {
