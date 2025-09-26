@@ -1,6 +1,4 @@
-# My Competitive Programming Solutions
-
-This repository contains my solutions to the problems on [Codeforces](https://codeforces.com/), [AtCoder](https://atcoder.jp/), [LeetCode](https://leetcode.com/) & [CodeChef](https://www.codechef.com/). Some may be old, unoptimal or plainly unreadable. I will try to fix them as I learn more.
+My solutions on different online judges.
 
 ## File Header
 
@@ -13,4 +11,4 @@ This repository contains my solutions to the problems on [Codeforces](https://co
 */
 ```
 
-> _Old submissions may not have this header._
+Running on C++20 standard using g++ compiler.
