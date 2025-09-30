@@ -1,28 +1,26 @@
+/*
+* Beautiful Year
+* https://codeforces.com/problemset/problem/271/A
+* Tue Sep 30 2025, 17:01:07 (UTC-3)
+* Myckoll Winchester
+*/
 #include <bits/stdc++.h>
 using namespace std;
-
-#define debug_vec(vec) cout << #vec << ": { "; for (auto v : vec) cout << v << " "; cout << "}  size: " << vec.size() << "\n";
-inline void next_line() { string ignore; getline(cin, ignore); }
 
 void solve() {
     int y;
     cin >> y;
-    int x = y+1;
     while (true) {
-        string xc = to_string(x);
-        set<char> cand(xc.begin(), xc.end());
-        if (xc.length() == cand.size()) break;
-        x++;
+        string y_str = to_string(++y);
+        set<char> y_unique(y_str.begin(), y_str.end());
+        if (y_str.length() == y_unique.size()) break;
     }
-    cout << x << "\n";
+    cout << y << '\n';
 }
 
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    // int t;
-    // cin >> t;
-    // while (t--)
-        solve();
+    solve();
     return 0;
 }
